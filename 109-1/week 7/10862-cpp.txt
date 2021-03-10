@@ -1,0 +1,54 @@
+#include <iostream>
+#include <cstring>
+#include <cstdio>
+using namespace std;
+const int MAXN = 2005;
+ 
+int len[MAXN],n;
+int f[MAXN][MAXN];
+ 
+void mul(int a,int b){
+    int i,t = 0;
+    len[a] = len[b];
+    for (i = 0; i < len[a]; i++){
+        f[a][i] = f[b][i] * 3 + t;
+        t = f[a][i]/10;
+        f[a][i] %= 10;
+    }
+    if (t){
+        len[a]++;
+        f[a][i] = t;
+    }
+}
+ 
+void sub(int a,int b){
+    int t = 0;
+    for (int i = 0; i < len[a]; i++){
+        f[a][i] = f[a][i] - f[b][i] + t;
+        if (f[a][i] < 0){
+            f[a][i] += 10;
+            t = -1;
+        }
+        else t = 0;
+    }
+    while (f[a][len[a]-1] == 0)
+        len[a]--;
+}
+ 
+int main(){
+	freopen("10862.in","r",stdin);
+	freopen("10862.out","w",stdout);
+    memset(f,0,sizeof(f));
+    f[1][0]=1,f[2][0]=3;
+    len[1] = len[2] = 1;
+    for (int i = 3; i <= 2000; i++){
+        mul(i,i-1);
+        sub(i,i-2);
+    }
+    while (scanf("%d",&n) != EOF && n){
+        for (int i = len[n]-1; i >= 0; i--)
+            printf("%d",f[n][i]);
+        printf("\n");
+    }
+    return 0;
+}
