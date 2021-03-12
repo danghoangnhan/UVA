@@ -1,11 +1,11 @@
 #include <bits/stdc++.h>
-
+#define MAXN 10002
 using namespace std;
-long long int length;
-//minial index
+long long int length,connected,index;
+vector <int> G[MAXN];
+long long int dp[10002][2];
 
-vector<vector<int>> G ;
-int dp[10002][2];
+
 void dfs(int u, int pa){
 
     dp[u][0]=0;
@@ -14,7 +14,6 @@ void dfs(int u, int pa){
     for(long long int i =0 ;i<G[u].size();i++){
 
         int v = G[u][i];
-
         if(v==pa)
         continue;
 
@@ -24,7 +23,6 @@ void dfs(int u, int pa){
         dp[u][1] += min(dp[v][1], dp[v][0]);
     }
     dp[u][1]++;
-
 }
 
 int main()
@@ -35,10 +33,8 @@ int main()
             G[i].clear();
 
         for(long long int i=1;i<length;i++){
-
-            long long int time ,index;
-            cin>>time;
-            while(time--){
+            cin>>connected;
+            while(connected--){
                 cin>>index;
                 G[i].push_back(index);
             }
@@ -47,7 +43,6 @@ int main()
             cout<<"1"<<endl;
             continue;
         }
-        
         dfs(1,-1);
         cout<<min(dp[1][0],dp[1][1])<<endl;
     }
