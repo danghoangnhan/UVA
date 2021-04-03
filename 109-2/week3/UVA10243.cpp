@@ -5,7 +5,6 @@ long long int length,connected,index;
 vector <int> G[MAXN];
 long long int dp[10002][2];
 
-
 void dfs(int u, int pa){
 
     dp[u][0]=0;
@@ -14,8 +13,8 @@ void dfs(int u, int pa){
     for(long long int i =0 ;i<G[u].size();i++){
 
         int v = G[u][i];
-        if(v==pa)
-        continue;
+        
+        if(v==pa)continue;
 
         dfs(u,v);
 
@@ -29,8 +28,7 @@ int main()
 {
     while(cin>>length && length){
 
-        for(long long int i = 0 ;i<length;i++)
-            G[i].clear();
+        for(long long int i = 0 ;i<length;i++)G[i].clear();
 
         for(long long int i=1;i<length;i++){
             cin>>connected;
