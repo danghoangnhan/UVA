@@ -4,8 +4,8 @@ using namespace std;
 int main()  
 {  
     int T,n,m; 
-	freopen("2756.in","r",stdin); 
-	freopen("2756.out","w",stdout);
+	// freopen("2756.in","r",stdin); 
+	// freopen("2756.out","w",stdout);
 	scanf("%d",&T); 
     while(T--)  
     {  
