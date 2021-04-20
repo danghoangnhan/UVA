@@ -8,8 +8,8 @@ long long int a[1120+1];
 
 int main()
 {
-    for (long long int i = 1; i <=1120;i++)
-        a[i]=1;
+    for (long long int i = 1; i <=1120;i++)a[i]=1;
+    
     for(long long int i =2 ;i<=1120;i++){
         if(a[i]){
             prime.push_back(i);

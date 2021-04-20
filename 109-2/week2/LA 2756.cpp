@@ -10,11 +10,8 @@ int main()
     while(T--)  
     {  
 		scanf("%d",&n);   
-        if(n%2==0)  
-           m=(n/2)*(n/2-1);   
-        else  
-           m=(n-1)*(n-1)/4;  
-		printf("%d\n",m);
+        m = (n % 2 == 0) ? (n / 2) * (n / 2 - 1) : (n - 1) * (n - 1) / 4;
+        printf("%d\n", m);
     }  
     return 0;
 }  

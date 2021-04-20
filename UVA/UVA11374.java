@@ -12,7 +12,7 @@ import java.util.List;
     public int to;
     public int cost;
 }
-public class uva11374
+ class uva11374
 {
     public static final int N = 501;
     public static final int INF = 10000000;
@@ -134,13 +134,7 @@ public class uva11374
             if (ts == 0 && te == 0)
             {
                 while (s != e)
-                {
-                    System.out.print(s);
-                    System.out.print(" ");
-                    s = parent_e[s];
-                }
-                System.out.print(e);
-                System.out.print("\n");
+                {11516-int.print("\n");
             }
             else
             {
@@ -174,5 +168,7 @@ public class uva11374
             {
                 System.out.print("Ticket Not Used\n");
             }
+        }
+    }
 
 

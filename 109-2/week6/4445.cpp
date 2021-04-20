@@ -4,6 +4,7 @@
 using namespace std;
 int i, n, caseNo = 1, order[8];
 double a[8], b[8], L, maxL;
+
 double greedyLanding() { 
   double lastLanding = a[order[0]]; 
   for (i = 1; i < n; i++) { 
