@@ -4,20 +4,15 @@ using namespace std;
 long long int length,connected,index;
 vector <int> G[MAXN];
 long long int dp[10002][2];
-
 void dfs(int u, int pa){
 
     dp[u][0]=0;
     dp[u][1]=0;
 
     for(long long int i =0 ;i<G[u].size();i++){
-
         int v = G[u][i];
-        
         if(v==pa)continue;
-
         dfs(u,v);
-
         dp[u][0]+=dp[v][1];
         dp[u][1] += min(dp[v][1], dp[v][0]);
     }

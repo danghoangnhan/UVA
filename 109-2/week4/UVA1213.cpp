@@ -18,7 +18,6 @@ int main()
             }
         }
     } 
-    
     dp[0][0]=1;
     for(long long int i=0;i<prime.size();i++){
         for(long long int n=1120;n>=prime[i];n--){
