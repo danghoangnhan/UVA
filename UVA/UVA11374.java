@@ -70,24 +70,15 @@ import java.util.List;
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int n;
-        int m;
-        int k;
-        int s;
-        int e;
-        int x;
-        int y;
-        int cost;
+        int n,m,k,s,e,x,y,cost;
         boolean flag = false;
 
         while (in.hasNextInt())
         {
-            for (int i = 1; i <= n; i++)
-            {
-                edge[i].clear();
-            }
+            for (int i = 1; i <= n; i++) edge[i].clear();
 
             m = Integer.parseInt(ConsoleInput.readToWhiteSpace(true));
+
             while ((m--) != 0)
             {
                 x = Integer.parseInt(ConsoleInput.readToWhiteSpace(true));
@@ -114,12 +105,14 @@ import java.util.List;
                 if (dis_s[x] + cost + dis_e[y] < distance)
                 {
                     distance = dis_s[x] + cost + dis_e[y];
-                    ts = x, te = y;
+                    ts = x;
+                    te = y;
                 }
                 if (dis_s[y] + cost + dis_e[x] < distance)
                 {
                     distance = dis_s[y] + cost + dis_e[x];
-                    ts = y, te = x;
+                    ts = y;
+                    te = x;
                 }
             }
 
