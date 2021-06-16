@@ -2,8 +2,7 @@
 
 using namespace std;
 long long int testCase;
-string sample;
-string check="OWO";
+string sample,check="OWO";
 int main(){
     cin>>testCase;
     while(testCase--){
