@@ -2,14 +2,13 @@ from os import listdir
 from os.path import isfile, join
 import os 
 def cleanFolder(path):
-    files = [f for f in listdir(path) if isfile(join(path, f))]
-
-    for file in files:
-        
-        if file.endswith('.exe'):
-            os.remove(file)
-        if os.path.isdir(file):
-            cleanFolder(path+file)
+    for root, directories, files in os.walk(path, topdown=False):
+        for name in files:
+            print(os.path.join(root, name))
+            if name.endswith('.exe'):
+                os.remove(os.path.join(root, name))
+        for name in directories:
+            print(os.path.join(root, name))
 
 
 
