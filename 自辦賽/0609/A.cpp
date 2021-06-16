@@ -14,8 +14,6 @@ int main(){
         else{
             cout << "male" << endl;
         }
-        
-        
     }
     return 0;
 }
