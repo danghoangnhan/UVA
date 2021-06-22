@@ -2,6 +2,7 @@
 
 using namespace std;
 long long int testCase,a,b,x,y,d,c,lcm,k;
+
 long long int extendGcd(long long int a,long long int b,long long int c,long long int &x,long long int &y){
     if(b==0){
         x=c/a;
