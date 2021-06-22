@@ -57,7 +57,6 @@ bool check(long long int x)
                 sniper.push_back(make_pair(x, y));
             }
             sort(enemy.begin(), enemy.end(), sortingX);
-            //for (long long int i = 0; i < v.size(); i++){cout << v[i].first << " " << v[i].second << endl;}
             printf("Case %d: ", k);
             if (check(0) == 0)
             {
