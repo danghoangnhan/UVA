@@ -6,7 +6,6 @@ long long int testCase,n,s,k,p[maxn];
 vector<int>G[maxn],nodes[maxn];
 bool c[maxn];
 //p is used to store the intermiated node
-
 void dfs1(int u,int f,int dist){
     p[u]=f;
     if(G[u].size()==1 && dist >k){
@@ -48,15 +47,13 @@ long long int solve(){
     return ans;
 }
 int main(){
-
+    freopen("1276.in", "r", stdin);
+    freopen("1276_daniel.out", "w", stdout);
     cin>>testCase;
         for(long long int i=0;i<testCase;i++){
             cin>>n>>s>>k;
-            //n=numberOfNode;s=VODEnode;k=limitDistance
-            for(long long int i=0;i<=n;i++){
-                G[i].clear();
-                nodes[i].clear();
-            }
+             G[i].clear();
+            nodes[i].clear();
             for(long long int i=0;i<n-1;i++){
                 int a,b;
                 cin>>a>>b;

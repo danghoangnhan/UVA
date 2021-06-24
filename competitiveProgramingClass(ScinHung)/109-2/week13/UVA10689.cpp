@@ -24,10 +24,14 @@ matrix multiply(const matrix &a, const matrix &b)
 
 matrix matrixPow(long long k)
 {
-    if (k == 1) return one;
+    if (k == 1) 
+        return one;
+
     matrix r = matrixPow(k >> 1);
     r = multiply(r, r);
-    if (k & 1) r = multiply(r, one);
+    
+    if (k & 1) 
+        r = multiply(r, one);
     return r;
 }
 
@@ -41,12 +45,14 @@ int main(int argc, char *argv[])
     {
         cin >> a >> b >> n >> m;
         mod = pow(10, m);
-        if (n == 0) cout << a % mod << '\n';
-        else if (n == 1) cout << b % mod << '\n';
+        if (n == 0) 
+            cout << a % mod << endl;
+        else if (n == 1) 
+            cout << b % mod << endl;
         else
         {
             matrix r = matrixPow(n - 1);
-            cout << (r.cell[0][0] * b + r.cell[0][1] * a) % mod << '\n';
+            cout << (r.cell[0][0] * b + r.cell[0][1] * a) % mod << endl;
         }
     }
 

@@ -51,8 +51,6 @@ int main(){
                     dp[i]=min(dp[i],d[k][j]+dp[i^(1<<j)^(1<<k)]);
                 }
             }
-
-
             }
         }
         cout<<"Case"<<++currentCase<<dp[1<<Number]-1<<endl;

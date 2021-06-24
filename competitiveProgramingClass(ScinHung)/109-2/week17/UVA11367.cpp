@@ -20,6 +20,7 @@ class dijkstra{
     bool visited[maxn];
     int d[maxn];
     int p[maxn];
+    
     public:
     void add_edge(int from,int to,int dist){
         edges.push_back((Edge){from,to,dist});
@@ -31,15 +32,10 @@ class dijkstra{
     int getDistance(int target){return d[target];}
     void run_dijkstra(int s){
         priority_queue<item> pq;
-
         for (long long int i = 0; i < n; i++){d[i] = INF;}
-
         d[s] = 0;
-
         memset(visited,0,sizeof(visited));
-
         pq.push((item){0,s});
-
         while(!pq.empty()){
             item x = pq.top();
             pq.pop();

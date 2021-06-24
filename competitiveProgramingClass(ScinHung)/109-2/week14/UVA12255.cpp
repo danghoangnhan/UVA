@@ -25,7 +25,6 @@ bool check(long long int x)
 
         cout<<sniper[i].first<<" "<<sniper[i].second<<endl;
     }
-    //cout << "done" << endl;
     sort(enemy.begin(), enemy.end(), sortingY);
     int cnt = 1;
     long long int R = sniper[0].second;

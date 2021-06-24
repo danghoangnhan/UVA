@@ -6,6 +6,8 @@ vector<int> G[maxn];
 bool dp[maxn][maxn];
 long long int tmp;
 int main(){
+    freopen("11450.in", "r", stdin);
+    freopen("11450_daniel.out", "w", stdout);
     cin>>testCase;
     while(testCase--){
         cin>>M>>C;

@@ -16,7 +16,6 @@ int main(){
         cin>>length;
         for(long long int i=0;i<length;i++){
             cin>>currentNumber;
-            //cout<<currentNumber<<endl;
             for(long long int k=1;k<=currentNumber;k++){
                 if(arr[k]==0){
                     arr[k]=1;
