@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <Basic/Template.h>
 struct DisjointSet
 {
     int p[MXV], sz[MXV];
