@@ -1,7 +1,5 @@
-#include<cstdio>
-#include<algorithm>
-#include<vector>
-#include<iostream>
+
+#include<bits/stdc++.h>
 using namespace std;
 typedef pair<int,int> Pair;
 #define maxn 10010
@@ -16,6 +14,7 @@ int main() {
     freopen("1611.in","r", stdin);
 	freopen("1611.out","w", stdout); 
     scanf("%d", &test);
+    
     while(test--) {
         scanf("%d", &n);
         for(int i = 1 ; i <= n; i++)
